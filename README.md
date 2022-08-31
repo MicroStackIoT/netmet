@@ -71,3 +71,8 @@ you have built the application you can flash it by running:
 ```shell
 west flash
 ```
+
+To launch menuconfig
+```shell
+west build -t menuconfig
+```
