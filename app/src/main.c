@@ -1,24 +1,27 @@
 /*
- * Copyright (c) 2021 Nordic Semiconductor ASA
+ * Copyright (c) 2022 Microstack
  * SPDX-License-Identifier: Apache-2.0
  */
 
 #include <zephyr/kernel.h>
+#include <zephyr/drivers/gpio.h>
 #include <zephyr/drivers/sensor.h>
-
 #include "app_version.h"
-
 #include <zephyr/logging/log.h>
+
 LOG_MODULE_REGISTER(main, CONFIG_APP_LOG_LEVEL);
 
 void main(void)
 {
 	int ret;
 	const struct device *sensor;
+	const struct gpio_dt_spec led; 
 
 	printk("Zephyr Example Application %s\n", APP_VERSION_STR);
 
 	sensor = DEVICE_DT_GET(DT_NODELABEL(examplesensor0));
+	//led = GPIO_DT_SPEC_GET(DT_ALIAS(gpio0), examplesensor0);
+	
 	if (!device_is_ready(sensor)) {
 		LOG_ERR("Sensor not ready");
 		return;
