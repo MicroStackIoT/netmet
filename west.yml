@@ -3,7 +3,7 @@
 
 manifest:
   self:
-    path: example-application
+    path: essense
 
   remotes:
     - name: zephyrproject-rtos
