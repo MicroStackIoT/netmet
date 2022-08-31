@@ -1,6 +1,6 @@
-# Zephyr Example Application
+# Microstack Low Power Sensor Application
 
-This repository contains a Zephyr example application. The main purpose of this
+This repository contains a Zephyr Low Power Sensor application. The main purpose of this
 repository is to serve as a reference on how to structure Zephyr based
 applications. Some of the features demonstrated in this example are:
 
