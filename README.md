@@ -52,7 +52,7 @@ west update
 The application can be built by running:
 
 ```shell
-west build -b $BOARD app
+west build -b custom_plank app
 ```
 
 where `$BOARD` is the target board. The `custom_plank` board found in this
